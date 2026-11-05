@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#d9dfe5">
+    <meta name="description" content="Sebuah ponsel tertinggal. Kamu hanya ingin mengembalikannya. Cerita thriller interaktif dari RespawnSociety.">
+    <title>Jangan Buka HP Orang! · RespawnSociety</title>
+    <link rel="stylesheet" href="./css/found-phone.css">
+    <link rel="stylesheet" href="./css/phone-social.css">
+    <link rel="stylesheet" href="./css/phone-library.css">
+    <link rel="stylesheet" href="./css/phone-organizer.css">
+</head>
+<body class="story-page">
+    <main class="story-layout">
+        <aside class="story-intro" aria-label="Tentang cerita">
+            <a class="story-brand" href="./">RespawnSociety</a>
+            <h1>Jangan buka<br>HP orang.</h1>
+            <p class="story-description">Sebuah ponsel tertinggal.<br>Kamu hanya ingin mengembalikannya.</p>
+            <p class="story-meta">Scene I</p>
+            <div class="story-actions">
+                <button type="button" id="notifications-story" aria-expanded="false">Notifikasi</button>
+                <button type="button" id="restart-story">Mulai ulang</button>
+                <a href="./credits.html">Sumber gambar</a>
+            </div>
+            <p class="story-credit">Jelajahi aplikasi dan baca percakapannya.<br>Tampilan mengikuti tab Draft Naskah, Scene I.</p>
+            <p id="storage-status" class="storage-status" role="status" hidden>Status notifikasi belum bisa disimpan di browser ini.</p>
+        </aside>
+        <section class="phone-stage" aria-label="Ponsel yang ditemukan">
+            <div id="found-phone" class="found-phone"></div>
+            <noscript><p>Aktifkan JavaScript untuk membuka ponsel dan memainkan cerita ini.</p></noscript>
+        </section>
+    </main>
+    <script type="module" src="./js/found-phone.js"></script>
+</body>
+</html>

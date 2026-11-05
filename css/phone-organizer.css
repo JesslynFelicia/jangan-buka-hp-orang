@@ -1,0 +1,69 @@
+.org-calendar, .org-reminders { display: flex; flex-direction: column; overflow: hidden; background: #fff; color: #1c1c1e; }
+.org-calendar .org-toolbar, .org-reminders .org-toolbar { position: relative; flex: 0 0 48px; display: flex; align-items: center; justify-content: center; padding: 0 10px; }
+.org-calendar .org-toolbar h2 { margin: 0; font-size: 17px; font-weight: 600; }
+.org-calendar .org-back, .org-reminders .org-back { position: absolute; left: 4px; top: 0; display: inline-flex; align-items: center; gap: 1px; min-height: 44px; padding: 0 6px; border: 0; background: transparent; font-size: 15px; color: #ff3b30; }
+.org-calendar .org-back svg, .org-reminders .org-back svg { width: 23px; height: 23px; }
+.org-calendar-scroll, .org-reminders-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.org-calendar .org-month-heading { display: flex; align-items: center; justify-content: space-between; padding: 0 16px 6px; }
+.org-calendar .org-month-heading h3 { margin: 0; font-size: 25px; letter-spacing: -.8px; text-transform: capitalize; }
+.org-calendar .org-month-heading > div { display: flex; }
+.org-calendar .org-month-arrow { width: 44px; min-height: 44px; border: 0; background: transparent; color: #ff3b30; font-size: 33px; line-height: 1; }
+.org-calendar .org-month-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 2px 0; padding: 0 10px 12px; border-bottom: 1px solid #e5e5ea; }
+.org-calendar .org-weekday { padding: 5px 0 8px; color: #8e8e93; text-align: center; font-size: 10px; }
+.org-calendar .org-calendar-day { position: relative; min-width: 0; min-height: 44px; display: flex; align-items: center; justify-content: center; padding: 0 0 4px; border: 0; background: transparent; color: #1c1c1e; font-size: 17px; }
+.org-calendar .org-calendar-day > span { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; }
+.org-calendar .org-calendar-day.is-today > span { background: #ff3b30; color: #fff; }
+.org-calendar .org-calendar-day.is-selected:not(.is-today) > span { background: #1c1c1e; color: #fff; }
+.org-calendar .org-event-dot { position: absolute; width: 4px; height: 4px; bottom: 0; left: calc(50% - 2px); background: #8e8e93; border-radius: 50%; }
+.org-calendar .org-day-agenda > h3 { padding: 13px 14px; margin: 0; border-bottom: 1px solid #ededf0; text-align: center; font-size: 12px; font-weight: 600; text-transform: capitalize; }
+.org-calendar .org-day-timeline { position: relative; padding-top: 15px; min-height: 186px; }
+.org-calendar .org-hour { display: flex; gap: 8px; height: 49px; align-items: flex-start; }
+.org-calendar .org-hour > time { flex: 0 0 42px; color: #8e8e93; font-size: 10px; text-align: right; line-height: 12px; }
+.org-calendar .org-hour > span { flex: 1; border-top: 1px solid #e5e5ea; margin-top: 5px; }
+.org-calendar .org-dinner { position: absolute; top: 69px; left: 51px; right: 12px; min-height: 48px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 5px 9px; border: 0; border-left: 3px solid #007aff; border-radius: 4px; background: #d9efff; color: #14466d; text-align: left; }
+.org-calendar .org-dinner strong { font-size: 14px; font-weight: 600; }
+.org-calendar .org-dinner time { margin-top: 2px; font-size: 11px; }
+.org-calendar .org-dinner.is-highlighted { background: #c4e7ff; }
+.org-calendar .org-calendar-bottom { flex: 0 0 46px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-top: 1px solid #e5e5ea; color: #ff3b30; background: #fafafa; font-size: 13px; }
+.org-calendar .org-text-button { min-height: 44px; border: 0; padding: 0; color: inherit; background: transparent; font-size: 14px; }
+.org-calendar .org-event-detail { padding: 18px 18px 0; }
+.org-calendar .org-event-detail h3 { margin: 0 0 13px; font-size: 29px; letter-spacing: -.8px; }
+.org-calendar .org-event-date { margin: 0 0 5px; font-size: 15px; text-transform: capitalize; }
+.org-calendar .org-event-time { margin: 0 0 28px; color: #8e8e93; font-size: 15px; }
+.org-calendar .org-event-field { display: flex; align-items: center; justify-content: space-between; min-height: 50px; padding: 10px 0; border-top: 1px solid #e5e5ea; border-bottom: 1px solid #e5e5ea; font-size: 14px; }
+.org-calendar .org-event-field strong { display: inline-flex; align-items: center; gap: 7px; color: #8e8e93; font-weight: 400; }
+.org-calendar .org-event-field i { width: 9px; height: 9px; border-radius: 50%; background: #007aff; }
+.org-calendar .org-empty, .org-reminders .org-empty { margin: 0; padding: 35px 16px; text-align: center; color: #8e8e93; font-size: 14px; line-height: 1.5; }
+.org-reminders .org-back { color: #007aff; }
+.org-reminders .org-reminders-scroll { padding: 0 17px 20px; }
+.org-reminders .org-reminder-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 8px 0 16px; color: #007aff; }
+.org-reminders .org-reminder-heading h2, .org-reminders .org-reminder-heading > strong { margin: 0; font-size: 31px; font-weight: 700; letter-spacing: -.8px; }
+.org-reminders .org-reminder-search { width: 100%; min-height: 36px; margin: 0 0 17px; padding: 7px 11px; border: 0; border-radius: 10px; background: #f0f0f2; color: #1c1c1e; font: inherit; font-size: 15px; }
+.org-reminders .org-reminder-row { display: flex; align-items: flex-start; gap: 12px; padding: 13px 2px; border-bottom: 1px solid #e5e5ea; cursor: pointer; }
+.org-reminders .org-reminder-row > input { appearance: none; -webkit-appearance: none; position: relative; flex: 0 0 22px; width: 22px; height: 22px; margin: 1px 0 0; border: 1.5px solid #c7c7cc; border-radius: 50%; background: #fff; cursor: pointer; }
+.org-reminders .org-reminder-row > input:checked { border-color: #007aff; background: #007aff; box-shadow: inset 0 0 0 3px #fff; }
+.org-reminders .org-reminder-row > input:focus-visible { outline: 3px solid #a6d3ff; outline-offset: 3px; }
+.org-reminders .org-reminder-copy { display: flex; flex-direction: column; gap: 5px; min-width: 0; padding-bottom: 2px; }
+.org-reminders .org-reminder-copy > strong { font-size: 16px; line-height: 1.4; font-weight: 400; overflow-wrap: anywhere; }
+.org-reminders .org-reminder-copy > small { color: #8e8e93; font-size: 12px; line-height: 1.3; }
+.org-reminders .org-reminder-row.is-complete .org-reminder-copy { color: #8e8e93; }
+.org-reminders .org-reminder-row.is-complete .org-reminder-copy > strong { text-decoration: line-through; }
+.org-reminders .org-reminder-row.is-highlighted { background: #f5faff; }
+.org-reminders .org-lists-title { margin: 6px 0 24px; font-size: 32px; letter-spacing: -1px; }
+.org-reminders .org-smart-lists { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+.org-reminders .org-smart-list { display: grid; grid-template-columns: 1fr auto; gap: 7px; min-height: 93px; padding: 12px; border: 0; border-radius: 12px; background: #f2f2f7; text-align: left; }
+.org-reminders .org-smart-icon { display: inline-flex; align-items: center; justify-content: center; width: 29px; height: 29px; border-radius: 50%; background: #007aff; color: #fff; font-size: 22px; font-weight: 500; line-height: 1; }
+.org-reminders .org-smart-list > strong { font-size: 28px; line-height: 1; }
+.org-reminders .org-smart-label { grid-column: 1 / -1; color: #8e8e93; font-size: 14px; font-weight: 600; }
+.org-reminders .org-smart-scheduled .org-smart-icon { background: #ff3b30; }
+.org-reminders .org-smart-all .org-smart-icon { background: #48484a; }
+.org-reminders .org-list-section { margin: 27px 0 13px; font-size: 21px; letter-spacing: -.5px; }
+.org-reminders .org-list-entry { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 58px; padding: 9px 10px; border: 0; border-radius: 12px; background: #f2f2f7; text-align: left; }
+.org-reminders .org-list-entry > strong { font-size: 16px; font-weight: 400; }
+.org-reminders .org-list-entry > small { margin-left: auto; color: #8e8e93; font-size: 15px; }
+.org-reminders .org-list-entry > span:last-child { color: #b1b1b6; font-size: 25px; }
+@media (max-width: 350px) {
+    .org-calendar .org-month-heading h3 { font-size: 22px; }
+    .org-calendar .org-calendar-day { min-height: 34px; }
+    .org-reminders .org-reminder-heading h2, .org-reminders .org-reminder-heading > strong { font-size: 28px; }
+}
