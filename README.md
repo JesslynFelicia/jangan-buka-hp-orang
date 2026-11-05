@@ -38,14 +38,21 @@ Saat server sudah berjalan, cek halaman, aset, kredit, serta batas akses server 
 
 ## Push ke GitHub
 
-Git lokal sudah diinisialisasi dengan branch `main`. Buat repositori GitHub kosong, lalu jalankan perintah berikut dari folder ini. Ganti URL contoh dengan URL repositorimu.
+Repo GitHub: [JesslynFelicia/jangan-buka-hp-orang](https://github.com/JesslynFelicia/jangan-buka-hp-orang).
+
+**Mainkan online: [Jangan Buka HP Orang!](https://jesslynfelicia.github.io/jangan-buka-hp-orang/)**
+
+GitHub Pages menerbitkan branch `main` dari folder root. File `.nojekyll` membuat HTML, CSS, JavaScript, dan gambar disajikan langsung. `serve.mjs` hanya untuk preview lokal; hosting tidak membutuhkan Node.js.
+
+Untuk mengirim perubahan berikutnya:
 
 ```sh
 git add .
-git commit -m "Initial story"
-git remote add origin https://github.com/USERNAME/jangan-buka-hp-orang.git
-git push -u origin main
+git commit -m "Update story"
+git push
 ```
+
+Perubahan yang dipush ke `main` otomatis diterbitkan oleh GitHub Pages setelah deployment selesai.
 
 File AU Maker, database, vendor, dan konfigurasi lingkungannya tidak termasuk di repositori ini. Halaman juga bisa disajikan oleh hosting statis; root situsnya adalah folder ini. HTML memakai JavaScript modules sehingga harus dibuka melalui server.
 
